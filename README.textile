@@ -1,7 +1,7 @@
 
 Sample usage:
 
-		<c:kitten myHeight="200" myWidth="200" />
+		@<c:kitten myHeight="200" myWidth="200" />
 
 		<c:kitten myHeight="200" myWidth="200" darylShaber="true" />
 
@@ -9,7 +9,7 @@ Sample usage:
 
 		<c:kitten myHeight="400" myWidth="300" applyToAll="true" />
 
-		<c:kitten myHeight="400" myWidth="300" applyToAll="true" darylShaber="true" />
+		<c:kitten myHeight="400" myWidth="300" applyToAll="true" darylShaber="true" />@
 
 See also, inaugural blog post:
 
