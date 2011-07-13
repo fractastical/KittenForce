@@ -1,0 +1,57 @@
+<apex:component>
+
+ <apex:attribute name="myWidth" type="Integer" required="true" description="Width of kitten image" />
+ <apex:attribute name="myHeight" type="Integer" required="true" description="Height of kitten image" />
+ <apex:attribute name="darylShaber" type="boolean" description="Daryl instead of kitten?" />
+ <apex:attribute name="applyToAll" type="boolean" description="Apply to all images on page?" />
+
+  <apex:outputPanel rendered="{!NOT(darylShaber == true)}"> 
+
+      <script>
+         var darylShaber = false;
+      </script>
+      <img src="http://placekitten.com/g/{!myWidth}/{!myHeight}" width="{!myWidth}" height="{!myHeight}"/>
+
+  </apex:outputPanel> 
+
+  <apex:outputPanel rendered="{!darylShaber == true}"> 
+  
+      <script>
+         var darylShaber = true;
+      </script>
+      <img src="http://i909.photobucket.com/albums/ac295/fractastical/ds_santa_reasonably_small.png" width="{!myWidth}" height="{!myHeight}"/>
+      
+  </apex:outputPanel> 
+ 
+  <apex:outputPanel rendered="{!applyToAll}"> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>   
+        <script>
+         (function($) {
+            $.fn.placekitten = function() {
+                this.find('img').each( function(i,element) {
+                    var w, h;
+                    w = element.width;
+                    h = element.height;
+                    if(w&&h) {
+                         
+                        var src;
+                        if(!darylShaber)
+                          src = 'http://placekitten.com/'+w+'/'+h;
+                        else
+                          src = 'http://i909.photobucket.com/albums/ac295/fractastical/ds_santa_reasonably_small.png';
+                        element.src=src;
+
+
+                    }
+                });
+            };
+        })(jQuery);
+        jQuery(document).ready(function() {
+          jQuery('body').placekitten();
+        });
+
+  </script>
+  
+  </apex:outputPanel>
+ 
+</apex:component>

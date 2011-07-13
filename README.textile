@@ -1,0 +1,16 @@
+
+Sample usage:
+
+		<c:kitten myHeight="200" myWidth="200" />
+
+		<c:kitten myHeight="200" myWidth="200" darylShaber="true" />
+
+		<c:kitten myHeight="400" myWidth="300" />
+
+		<c:kitten myHeight="400" myWidth="300" applyToAll="true" />
+
+		<c:kitten myHeight="400" myWidth="300" applyToAll="true" darylShaber="true" />
+
+See also, inaugural blog post:
+
+		http://fractastical.com/2011/07/13/announcing-kittenforce/
