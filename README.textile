@@ -1,7 +1,7 @@
 
 Sample usage:
 
-		@<c:kitten myHeight="200" myWidth="200" />
+		@<c:kitten myHeight="200" myWidth="200" />@
 
 		<c:kitten myHeight="200" myWidth="200" darylShaber="true" />
 
